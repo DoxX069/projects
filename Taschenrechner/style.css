@@ -1,14 +1,19 @@
+body {
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255)
+}
+
 h1 {
     text-align: center;
 }
 
 table {
-    border: 5px solid black;
+    border: 5px solid rgb(255, 255, 255);
     margin: auto;
 }
 
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(64, 56, 71);
     width: 50px;
     height: 50px;
     text-align: center;
