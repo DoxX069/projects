@@ -1,0 +1,40 @@
+body {
+	background-color: #bfbeeb;
+	text-align: center;
+	margin: 10px;
+}
+h1 {
+	font-size: 50px;
+	border-radius: 10px;
+	margin-left:200px;
+	margin-right: 200px;
+	padding:25px;
+}
+td {
+	width: 75px;
+	height: 75px;
+	text-align: center;
+	color: #bfbeeb;
+	background-color:#262036;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 5px;
+	border-color: #473c63;
+	font-size: 30px;
+	font-family: anton-sc;
+}
+table {
+	margin: auto;
+	border-spacing: 8px;
+}
+input {
+	border: none;
+	background-color: #ff5324;
+}
+#enter {
+	background-color: #ffa724;
+	color: #262036;
+}
+#displayContainer {
+	background-color: #ff5324;
+}
