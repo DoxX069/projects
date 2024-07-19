@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(49, 39, 34);
+}
+.row {
+    background-color: antiquewhite;
+}
+.column {
+    background-color: aliceblue;
+}
+h1 {
+    background-color: rgb(145, 121, 105);
+}
