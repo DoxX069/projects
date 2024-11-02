@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs4x6rnuq1umm"]
+
+[ext_resource type="Script" path="res://scripts/sceneManager.gd" id="1_5y5f7"]
+[ext_resource type="FontFile" uid="uid://vv336o85oxbs" path="res://assets/fonts/ArchivoBlack-Regular.ttf" id="2_6ed26"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vb0id"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_5y5f7")
+
+[node name="buttonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1024.0
+offset_bottom = 600.0
+
+[node name="Label" type="Label" parent="buttonManager"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 50.0
+offset_right = 315.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("2_6ed26")
+theme_override_font_sizes/font_size = 40
+text = "BlockBOX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="newBuild" type="Button" parent="buttonManager"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 150.0
+offset_right = 315.0
+offset_bottom = 250.0
+text = "new Build"
+
+[node name="loadBuild" type="Button" parent="buttonManager"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 275.0
+offset_right = 315.0
+offset_bottom = 375.0
+text = "load Build"
+
+[node name="quit" type="Button" parent="buttonManager"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 45.0
+offset_right = 976.0
+offset_bottom = 121.0
+text = "quit"
+icon = SubResource("ViewportTexture_vb0id")
+
+[connection signal="pressed" from="buttonManager/newBuild" to="." method="_on_new_build_pressed"]
+[connection signal="pressed" from="buttonManager/loadBuild" to="." method="_on_load_build_pressed"]
+[connection signal="pressed" from="buttonManager/quit" to="." method="_on_quit_pressed"]
