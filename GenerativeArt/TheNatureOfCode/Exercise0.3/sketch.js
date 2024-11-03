@@ -15,40 +15,61 @@ class Walker {
   constructor() {
     this.x = width / 2;
     this.y = height / 2;
+
+    this.t = 0;
   }
   show() {
-    noStroke();
-    fill(255, 100, 100, 255);
-    circle(this.x, this.y, 2);
+    let xoff = 0.0;
+    let yoff = 0.0;
+
+    let colorR = randomGaussian(150, 75);2
+    let colorB = randomGaussian(10, 5);
+    let colorG = randomGaussian(100, 5);
+
+    strokeWeight(3);
+    stroke(colorR, colorB, colorG, 50);
+    noFill();
+    circle(this.x, this.y, 10);
+
+    xoff += 0.01;
+    yoff += 0.01;
   }
   step() {
-    let num = random(1);
-    if (num < 0.6) {
-      if (mouseX < this.x) {
-        this.x -= 1;
-      } 
-      if (mouseX > this.x) {
-        this.x += 1;
-      }
-      if (mouseY < this.y) {
-        this.y -= 1;
-      }
-      if (mouseY > this.y) {
-        this.y += 1;
+    let num = random(1); 
+    let step = noise(this.t) * 30;
+
+    if (num < 0.25) {
+      if (this.x > width) {
+         this.x += 0;
       }
       else {
-        this.x += 0;
-        this.y += 0;
+        this.x += step;
       }
-    } 
-    else if (num < 0.7) {
-      this.x += 2;
-    } else if (num < 0.8) {
-      this.x -= 2;
-    } else if (num < 0.9) {
-      this.y += 2;
-    } else {
-      this.y -= 2;
     }
+    else if (num < 0.5) {
+      if (this.x < 0) {
+        this.x += 0;
+      }
+      else {
+        this.x -= step;
+      }
+    }
+    else if (num < 0.75) {
+      if (this.y > height) {
+        this.y += 0;
+     }
+     else {
+       this.y += step;
+     }
+    } 
+    else {
+      if (this.y < 0) {
+        this.y += 0;
+     }
+     else {
+       this.y -= step;
+     }
+    }
+    this.t += 0.02;
   }
 }
