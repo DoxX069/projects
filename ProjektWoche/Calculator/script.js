@@ -38,7 +38,7 @@ function equal() {
 	else if (op == '+') {
 		ergebnis = parseInt(firstNum) + parseInt(secondNum);
 	}
-	let sound = new Audio ("anita-max-wynn.mp3");
+	let sound = new Audio ("mouseClick.mp3");
 	sound.play();
 	remove();
 	display.value = ergebnis;
