@@ -49,4 +49,6 @@ function remove() {
 	secondNum = '';
 	op = '';
 	display.value = '';
+	let sound = new Audio ("mouseClick.mp3");
+	sound.play();
 }
