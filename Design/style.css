@@ -1,0 +1,35 @@
+body {
+    background-color: #f1f1f1;
+}
+
+@font-face {
+    font-family: "Archivo_Black";
+    src: url("fonts/Archivo_Black/ArchivoBlack-Regular.ttf");
+}
+
+h1 {
+    position: flex;
+    top: 0;
+    font-family: "Archivo_Black";
+    text-align: center;
+    font-size: 150px;
+    color: rgb(37, 37, 37);
+    transition-duration: 0.3s;
+    transition-behavior: ease;
+    transition-property: color;
+}
+
+h1:hover {
+    color: rgba(37, 37, 37, 0.5);
+    transition: 0.3s;
+}
+
+.fadeBox {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    font-family: "Archivo_Black";
+    text-align: center;
+    font-size: 45px;
+    color: rgb(37, 37, 37);
+}
