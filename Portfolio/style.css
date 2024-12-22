@@ -1,0 +1,54 @@
+header {
+    color: rgb(240, 241, 230);
+    position: sticky;
+    font-family: "Agenda-One-Medium";
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+span{
+    color: rgb(240, 241, 230);
+    font-family: "Agenda-One-Black";
+}
+
+.firstLetter {
+    color: rgb(255, 171, 69);
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    text-align: center;
+}
+
+body {
+    background-image: url("images/background2.png");
+    background-size: cover;
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Agenda-One-Medium;
+    font-size: 20px;
+    color: rgb(240, 241, 230);
+
+
+}
+
+@font-face {
+    font-family: "Agenda-One-Medium";
+    src: url(font/AgendaOneMedium);
+}
+
+@font-face {
+    font-family: "Agenda-One-Black";
+    src: url(font/AgendaOneBlack);
+}
