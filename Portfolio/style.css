@@ -29,7 +29,6 @@ body {
 
 #clock {
     font-size: 32px;
-
 }
 
 button {
@@ -39,7 +38,6 @@ button {
     cursor: pointer;
     font-size: inherit;
     color: inherit;
-
 }
 
 button:hover {
@@ -114,7 +112,7 @@ footer  {
     display: sticky;
     bottom: 0px;
     position: relative;
-    bottom: 0;
+    bottom: 45px;
     margin-top: 150px;
     text-align: center;
 }
@@ -134,10 +132,13 @@ footer  {
     src: url(font/KronaOne-Regular.ttf);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
     #clock {
         width: 0px;
         transition: width 2s ease-in-out;
         overflow: hidden;
+    }
+    .header {
+        justify-content: center;
     }
 }
