@@ -22,13 +22,23 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 0px auto 0px auto;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     gap: 50px;
     z-index: 1;
 }
 
-#clock {
+.header #infoBox {
     font-size: 32px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 165, 54);
+    padding: 15px;
+    flex-shrink: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.header #clock {
+    font-size: 35px;
 }
 
 button {
