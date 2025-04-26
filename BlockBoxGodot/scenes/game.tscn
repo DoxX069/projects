@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dwx2pgyrss8sp"]
 
 [ext_resource type="Texture2D" uid="uid://ccm1tlys1d1fx" path="res://assets/materials/1601.m10.i307.n008.F.c05.205439527 Vector grid marking for user HUD interface.jpg" id="1_j1di0"]
-[ext_resource type="Script" path="res://scripts/cameraController.gd" id="2_1g5jo"]
+[ext_resource type="Script" uid="uid://05n7qgn4kay0" path="res://scripts/cameraController.gd" id="2_1g5jo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_18xyh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

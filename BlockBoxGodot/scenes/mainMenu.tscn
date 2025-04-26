@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bs4x6rnuq1umm"]
 
-[ext_resource type="Script" path="res://scripts/sceneManager.gd" id="1_5y5f7"]
+[ext_resource type="Script" uid="uid://iqbgw4fj4riw" path="res://scripts/sceneManager.gd" id="1_5y5f7"]
 [ext_resource type="FontFile" uid="uid://vv336o85oxbs" path="res://assets/fonts/ArchivoBlack-Regular.ttf" id="2_6ed26"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_vb0id"]
