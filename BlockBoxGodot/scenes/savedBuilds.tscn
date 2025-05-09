@@ -24,6 +24,7 @@ text = "Back"
 
 [node name="Label" type="Label" parent="Control"]
 custom_minimum_size = Vector2(50, 0)
+layout_mode = 0
 offset_left = 65.0
 offset_top = 50.0
 offset_right = 365.0
