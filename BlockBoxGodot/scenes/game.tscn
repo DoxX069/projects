@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwx2pgyrss8sp"]
+[gd_scene load_steps=9 format=3 uid="uid://dwx2pgyrss8sp"]
 
 [ext_resource type="Script" uid="uid://05n7qgn4kay0" path="res://scripts/cameraController.gd" id="2_1g5jo"]
 [ext_resource type="PackedScene" uid="uid://dsregasvvg6p7" path="res://scenes/block.tscn" id="2_lnu2h"]
-[ext_resource type="Script" uid="uid://bqi6eb2fdk6fs" path="res://scripts/object.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://tpbnjr26nitk" path="res://platform_block.tscn" id="4_p57ef"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_18xyh"]
@@ -17,6 +16,11 @@ background_mode = 2
 sky = SubResource("Sky_oleb4")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_lbhrr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lbhrr"]
+albedo_color = Color(1, 0.380392, 0.627451, 1)
 
 [node name="Game" type="Node3D"]
 
@@ -37,13 +41,17 @@ fov = 15.0
 size = 30.94
 
 [node name="Blocks" type="Node3D" parent="."]
-script = ExtResource("4_iywne")
 
 [node name="Block" parent="Blocks" instance=ExtResource("2_lnu2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, 0.5)
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Blocks/Block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.951742, 0)
+mesh = SubResource("PrismMesh_lbhrr")
+surface_material_override/0 = SubResource("StandardMaterial3D_lbhrr")
+
 [node name="Block2" parent="Blocks" instance=ExtResource("2_lnu2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, 3.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35034, 1.5, -2.2422)
 
 [node name="platform" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)

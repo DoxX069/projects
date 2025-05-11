@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsregasvvg6p7"]
+[gd_scene load_steps=9 format=3 uid="uid://dsregasvvg6p7"]
 
-[ext_resource type="Script" uid="uid://depyqtfol7y8v" path="res://scripts/block_area.gd" id="1_8r6n6"]
+[ext_resource type="Script" uid="uid://cav7obdlsyea" path="res://scripts/Block/States/StateMachine.gd" id="2_cgrg5"]
+[ext_resource type="Script" uid="uid://bbem15uhj3ttc" path="res://scripts/Block/States/BlockIdle.gd" id="3_4kun4"]
+[ext_resource type="Script" uid="uid://cjnetusoycm5n" path="res://scripts/Block/States/BlockDrag.gd" id="4_ojgcc"]
+[ext_resource type="Script" uid="uid://b30th4fumxis5" path="res://scripts/Block/States/BlockDrop.gd" id="5_1bw7o"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p57ef"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r6n6"]
+albedo_color = Color(0.235294, 0.470588, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cgrg5"]
 
@@ -13,22 +19,36 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 gravity_scale = 0.0
-script = ExtResource("1_8r6n6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_p57ef")
+surface_material_override/0 = SubResource("StandardMaterial3D_8r6n6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_cgrg5")
 disabled = true
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_8r6n6")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
-[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
-[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_cgrg5")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_4kun4")
+
+[node name="Drag" type="Node" parent="StateMachine"]
+script = ExtResource("4_ojgcc")
+
+[node name="Drop" type="Node" parent="StateMachine"]
+script = ExtResource("5_1bw7o")
+
+[connection signal="body_entered" from="Area3D" to="StateMachine/Drag" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="StateMachine/Drag" method="_on_area_3d_body_exited"]
+[connection signal="mouse_entered" from="Area3D" to="StateMachine/Idle" method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_entered" from="Area3D" to="StateMachine/Drag" method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="StateMachine/Idle" method="_on_area_3d_mouse_exited"]
+[connection signal="mouse_exited" from="Area3D" to="StateMachine/Drag" method="_on_area_3d_mouse_exited"]
