@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwx2pgyrss8sp"]
+[gd_scene load_steps=10 format=3 uid="uid://dwx2pgyrss8sp"]
 
 [ext_resource type="Script" uid="uid://05n7qgn4kay0" path="res://scripts/cameraController.gd" id="2_1g5jo"]
 [ext_resource type="PackedScene" uid="uid://dsregasvvg6p7" path="res://scenes/block.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://da8630ltllk5m" path="res://scenes/platform.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://tpbnjr26nitk" path="res://platform_block.tscn" id="4_p57ef"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_18xyh"]
@@ -51,7 +52,7 @@ mesh = SubResource("PrismMesh_lbhrr")
 surface_material_override/0 = SubResource("StandardMaterial3D_lbhrr")
 
 [node name="Block2" parent="Blocks" instance=ExtResource("2_lnu2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35034, 1.5, -2.2422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -2.5)
 
 [node name="platform" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
@@ -297,3 +298,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3)
 
 [node name="platform_block81" parent="platform" instance=ExtResource("4_p57ef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="newPlatform" parent="." instance=ExtResource("4_lbhrr")]
+transform = Transform3D(9, 0, 0, 0, 1, 0, 0, 0, 9, 0.5, 0.5, 0.5)
+visible = false

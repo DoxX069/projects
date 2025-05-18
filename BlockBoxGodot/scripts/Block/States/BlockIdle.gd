@@ -7,7 +7,7 @@ func enter() -> void:
 	pass
 	
 func update(_delta: float) -> void:
-	if Input.is_action_pressed("drag") and draggable:# and is_closest_block(block):
+	if Input.is_action_just_pressed("drag") and draggable:# and is_closest_block(block):
 		finished.emit(self, "drag")
 		
 func physics_update(_delta: float) ->void:

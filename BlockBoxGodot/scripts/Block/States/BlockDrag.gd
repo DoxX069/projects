@@ -15,12 +15,12 @@ func update(_delta:float) ->void:
 func physics_update(_delta: float) ->void:
 	get_intersection()
 	get_closest_node()
-	if closest_node != null:	
-		print(closest_node.global_position)
-		closest_node.get_node("MeshInstance3D").change_material()
+	print(nodes_in_area.size())
+	if Global.closest_node != null:	
+		print(Global.closest_node.global_position)
+		Global.closest_node.get_node("MeshInstance3D").change_material()
 		# Change position while dragging
 	block.global_transform.origin = intersection - offset
-	
 	# Change state
 	if Input.is_action_just_released("drag"):
 		finished.emit(self, "drop")
@@ -30,12 +30,12 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		nodes_in_area.append(body)  # Add body to the list
 			
 func _on_area_3d_body_exited(body: Node3D) -> void:
-	if body in nodes_in_area:
+	if body in nodes_in_area: 
 		nodes_in_area.erase(body) # Remove body from list
 	body.get_node("MeshInstance3D").reset_material()
 	
 func get_closest_node() -> void:
-	#closest_node = null
+	Global.closest_node = null
 	closest_node_distance = INF
 	for node in nodes_in_area:
 		node.get_node("MeshInstance3D").reset_material() # Reset material
@@ -43,7 +43,7 @@ func get_closest_node() -> void:
 		# Check if this node is closer than the previous closest
 		if distance < closest_node_distance:
 			closest_node_distance = distance
-			closest_node = node
+			Global.closest_node = node
 
 
 func _on_area_3d_mouse_entered() -> void:

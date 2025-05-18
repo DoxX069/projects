@@ -1,5 +1,3 @@
 extends Node
 
-
-var current_tween: Tween
-#var closest_block_distance = INF
+var closest_node: Node3D

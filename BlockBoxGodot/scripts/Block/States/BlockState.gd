@@ -6,11 +6,11 @@ var is_dragging = false
 var nodes_in_area: Array = []
 var draggable = false
 var closest_block: bool
-var closest_node: Node3D
+#var closest_node: Node3D
 var intersection: Vector3
 
 func _ready() -> void:
-	block = get_node("../..")	
+	block = get_node("../..")
 
 func get_intersection() -> void:
 	# Get camera and mouse position for raycasting
