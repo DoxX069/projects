@@ -12,14 +12,12 @@ uv1_scale = Vector3(3, 2, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_x1i2l"]
 material = SubResource("StandardMaterial3D_ms3jd")
 
-[node name="platform_block" type="StaticBody3D" groups=["dropable"]]
+[node name="platform_block" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_4l05e")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("BoxMesh_x1i2l")
 skeleton = NodePath("../..")
 script = ExtResource("2_4l05e")
