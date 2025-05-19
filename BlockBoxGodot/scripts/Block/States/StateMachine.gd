@@ -37,3 +37,5 @@ func _transition_to_next_state(state, new_state_name) -> void:
 	new_state.enter()
 	
 	current_state = new_state
+	
+	print(current_state)

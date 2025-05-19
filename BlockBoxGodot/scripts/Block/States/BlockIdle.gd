@@ -1,14 +1,19 @@
 extends BlockState
 class_name BlockIdle
+
+func physics_update(_delta: float) -> void:
+	ground_distance = Global.collision_point.distance_to(block.global_transform.origin)
+	#Global.dragged_block = null
 	
-func update(_delta: float) -> void:
+	if ground_distance > 1 and not falling:
+		finished.emit(self, "fall")
 	if Input.is_action_just_pressed("drag") and draggable:
 		finished.emit(self, "drag")
 		
 func _on_block_mouse_entered() -> void:
 	draggable = true
-	Global.dragged_block = block
+	Global.dragged_block = block # For ignoring dragged block in raycast intersection
 
 func _on_block_mouse_exited() -> void:
 	draggable = false
-	Global.dragged_block = null
+	Global.dragged_block = null # For ignoring dragged block in raycast intersection

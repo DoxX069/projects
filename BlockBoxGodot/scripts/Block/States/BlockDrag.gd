@@ -1,12 +1,11 @@
 extends BlockState
-class_name BlockDragging
+class_name BlockDrag
 
 var offset: Vector3
 
 func enter() -> void:
-	#get_intersection()
+	#Global.dragged_block = block
 	# Prevent object from snapping to mouse
-	
 	offset = Global.intersection.position - block.global_transform.origin
 	
 func update(_delta:float) ->void:
@@ -14,7 +13,6 @@ func update(_delta:float) ->void:
 	
 func physics_update(_delta: float) ->void:
 	if Global.intersection:
-		print(Global.intersection.collider.position)
 		#Global.intersection.collider.get_node("MeshInstance3D").change_material()
 		# Change position while dragging
 		block.global_transform.origin = Global.intersection.position - offset
