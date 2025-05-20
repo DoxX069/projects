@@ -1,19 +1,17 @@
 extends State
-class_name BlockState
+class_name PlatformState
 
-var block: Node3D
-var draggable := false
-var ground_distance: float
+var platform: Node3D
 var dropable := true
 const ray_length = 1000
  
 func _ready() -> void:
-	block = get_node("../..")
+	platform = get_node("../..")
 
 func raycast_down():
-	var space_state = block.get_world_3d().direct_space_state
+	var space_state = platform.get_world_3d().direct_space_state
 	
-	var origin = block.position
+	var origin = platform.position
 	var end = origin + Vector3(0,-1,0) * ray_length
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
 	var result = space_state.intersect_ray(query)
@@ -22,9 +20,9 @@ func raycast_down():
 		Global.under_block = result.collider
 	
 func raycast_up():
-	var space_state = block.get_world_3d().direct_space_state
+	var space_state = platform.get_world_3d().direct_space_state
 
-	var origin = block.position
+	var origin = platform.position
 	var end = origin + Vector3(0,1,0) * ray_length
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
 	var result = space_state.intersect_ray(query)

@@ -32,10 +32,6 @@ project/assembly_name="BlockBox"
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg")
 
-[global_group]
-
-dropable=""
-
 [input]
 
 rotate+={

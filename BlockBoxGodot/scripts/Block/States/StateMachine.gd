@@ -39,3 +39,7 @@ func _transition_to_next_state(state, new_state_name) -> void:
 	current_state = new_state
 	
 	print(current_state)
+
+func is_in_state(state: State) ->bool:
+	return current_state == state
+	

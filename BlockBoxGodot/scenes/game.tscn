@@ -51,6 +51,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
 [node name="Block3" parent="Blocks" instance=ExtResource("2_lnu2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 2)
 
+[node name="Block4" parent="Blocks" instance=ExtResource("2_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
+
 [node name="platform" type="Node3D" parent="."]
 
 [node name="platform_block" parent="platform" instance=ExtResource("4_p57ef")]

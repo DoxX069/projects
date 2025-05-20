@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://dsregasvvg6p7"]
 
 [ext_resource type="Script" uid="uid://bode7a2eoxbti" path="res://scripts/highlight.gd" id="1_1bw7o"]
-[ext_resource type="Script" uid="uid://cn3lgms7txq4d" path="res://scripts/Block/block_raycast.gd" id="2_bk4tb"]
 [ext_resource type="Script" uid="uid://cav7obdlsyea" path="res://scripts/Block/States/StateMachine.gd" id="2_cgrg5"]
 [ext_resource type="Script" uid="uid://bbem15uhj3ttc" path="res://scripts/Block/States/BlockIdle.gd" id="3_4kun4"]
 [ext_resource type="Script" uid="uid://cjnetusoycm5n" path="res://scripts/Block/States/BlockDrag.gd" id="4_ojgcc"]
 [ext_resource type="Script" uid="uid://b30th4fumxis5" path="res://scripts/Block/States/BlockDrop.gd" id="5_1bw7o"]
 [ext_resource type="Script" uid="uid://dpedjnw8yvawj" path="res://scripts/Block/States/BlockFall.gd" id="7_om4np"]
+[ext_resource type="Script" uid="uid://c2hmas4eq7x5x" path="res://scripts/Block/States/BlockDropable.gd" id="8_om4np"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p57ef"]
 
@@ -15,7 +15,7 @@ albedo_color = Color(1, 0.27451, 0.52549, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cgrg5"]
 
-[node name="Block" type="RigidBody3D"]
+[node name="Block" type="RigidBody3D" groups=["dropable"]]
 axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true
@@ -32,13 +32,9 @@ script = ExtResource("1_1bw7o")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_cgrg5")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, -20, 0)
-script = ExtResource("2_bk4tb")
-
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_cgrg5")
-initial_state = NodePath("Idle")
+initial_state = NodePath("Dropable")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_4kun4")
@@ -52,7 +48,12 @@ script = ExtResource("5_1bw7o")
 [node name="Fall" type="Node" parent="StateMachine"]
 script = ExtResource("7_om4np")
 
+[node name="Dropable" type="Node" parent="StateMachine"]
+script = ExtResource("8_om4np")
+
 [connection signal="body_entered" from="." to="StateMachine/Drag" method="_on_block_body_entered"]
 [connection signal="body_exited" from="." to="StateMachine/Drag" method="_on_block_body_exited"]
 [connection signal="mouse_entered" from="." to="StateMachine/Idle" method="_on_block_mouse_entered"]
+[connection signal="mouse_entered" from="." to="StateMachine/Dropable" method="_on_block_mouse_entered"]
 [connection signal="mouse_exited" from="." to="StateMachine/Idle" method="_on_block_mouse_exited"]
+[connection signal="mouse_exited" from="." to="StateMachine/Dropable" method="_on_block_mouse_exited"]

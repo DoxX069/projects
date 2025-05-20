@@ -9,7 +9,7 @@ func enter() ->void:
 		current_tween.kill()
 	current_tween = get_tree().create_tween().set_trans(Tween.TRANS_EXPO)
 		
-	if Global.intersection != null and Global.intersection.collider != $"../../../../platform/Area3D":
+	if Global.intersection != null and Global.intersection.collider.get_node("StateMachine/Dropable").dropable:
 		current_tween.tween_property(block,"global_position",Global.intersection.collider.position+Vector3(0,1,0),0.5)
 		await current_tween.finished
 		current_tween.kill()
