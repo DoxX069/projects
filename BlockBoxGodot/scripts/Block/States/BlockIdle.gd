@@ -4,11 +4,14 @@ class_name BlockIdle
 func physics_update(_delta: float) -> void:
 	raycast_down()
 	raycast_up()
-	dropable = false
+	reset_material(block)
 	ground_distance = Global.under_block_position.distance_to(block.global_transform.origin)
 	#Global.dragged_block = null
-	if not Global.block_above:
-		finished.emit(self, "dropable")
+	if not block_above:
+		dropable = true
+	else:
+		dropable = false
+	
 	if ground_distance > 1 and not Global.falling:
 		finished.emit(self, "fall")
 	if Input.is_action_just_pressed("drag") and draggable:

@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://tpbnjr26nitk"]
+[gd_scene load_steps=7 format=3 uid="uid://tpbnjr26nitk"]
 
 [ext_resource type="Texture2D" uid="uid://buyflaxqb4frg" path="res://assets/BlockBoxTexture.svg" id="1_e2bc6"]
-[ext_resource type="Script" uid="uid://bode7a2eoxbti" path="res://scripts/highlight.gd" id="2_4l05e"]
-[ext_resource type="Script" uid="uid://cav7obdlsyea" path="res://scripts/Block/States/StateMachine.gd" id="3_jxdnk"]
-[ext_resource type="Script" uid="uid://c4ewknypbfw1m" path="res://scripts/Platform/PlatformIdle.gd" id="4_jxdnk"]
-[ext_resource type="Script" uid="uid://dqbgjsf815ont" path="res://scripts/Platform/PlatformDropable.gd" id="5_eaf0o"]
+[ext_resource type="Script" uid="uid://cav7obdlsyea" path="res://scripts/StateMachine/StateMachine.gd" id="3_jxdnk"]
+[ext_resource type="Script" uid="uid://c4ewknypbfw1m" path="res://scripts/Platform/States/PlatformIdle.gd" id="4_jxdnk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4l05e"]
 
@@ -23,14 +21,10 @@ shape = SubResource("BoxShape3D_4l05e")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_x1i2l")
 skeleton = NodePath("../..")
-script = ExtResource("2_4l05e")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_jxdnk")
-initial_state = NodePath("Dropable")
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("4_jxdnk")
-
-[node name="Dropable" type="Node" parent="StateMachine"]
-script = ExtResource("5_eaf0o")

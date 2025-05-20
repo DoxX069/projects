@@ -6,6 +6,10 @@ var draggable := false
 var ground_distance: float
 var dropable := true
 const ray_length = 1000
+var block_above: Node3D
+var last_position: Vector3
+var under_block_position: Vector3
+var under_block: Node3D
  
 func _ready() -> void:
 	block = get_node("../..")
@@ -29,5 +33,15 @@ func raycast_up():
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
 	var result = space_state.intersect_ray(query)
 	if result:
-		Global.block_above = result.collider
-		print(Global.block_above)
+		block_above = result.collider
+		#print(block_above)
+	
+func change_material(node: Node3D) ->void:
+	var material = StandardMaterial3D.new()
+	material.albedo_color = Color(0,100,100)
+	if node.get_node("MeshInstance3D"):
+		node.get_node("MeshInstance3D").material_override = material
+
+func reset_material(node: Node3D):
+	if node.get_node("MeshInstance3D"):
+		node.get_node("MeshInstance3D").material_override = null
