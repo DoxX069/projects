@@ -4,7 +4,6 @@ class_name BlockIdle
 func physics_update(_delta: float) -> void:
 	raycast_down()
 	raycast_up()
-	reset_material(block)
 	ground_distance = Global.under_block_position.distance_to(block.global_transform.origin)
 	#Global.dragged_block = null
 	if not block_above:

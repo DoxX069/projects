@@ -38,10 +38,14 @@ func raycast_up():
 	
 func change_material(node: Node3D) ->void:
 	var material = StandardMaterial3D.new()
-	material.albedo_color = Color(0,100,100)
+	material.albedo_color = Color(10,10,10)
 	if node.get_node("MeshInstance3D"):
 		node.get_node("MeshInstance3D").material_override = material
+	else:
+		pass
 
 func reset_material(node: Node3D):
 	if node.get_node("MeshInstance3D"):
 		node.get_node("MeshInstance3D").material_override = null
+	else:
+		pass
