@@ -3,7 +3,6 @@ class_name BlockDrop
 
 func enter() ->void:
 	raycast_down()
-	raycast_up()
 	var current_tween := get_tree().create_tween().set_trans(Tween.TRANS_EXPO)
 	if Global.intersection:
 		# Drop to the last raycast collider

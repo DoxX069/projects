@@ -3,7 +3,6 @@ class_name BlockFall
 
 func enter() ->void:
 	raycast_down()
-	raycast_up()
 	Global.falling = true
 	if ray_down:
 		var current_tween := get_tree().create_tween().set_trans(Tween.TRANS_EXPO)

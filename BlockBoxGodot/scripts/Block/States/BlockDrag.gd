@@ -9,9 +9,9 @@ func enter() -> void:
 
 func physics_update(delta: float) ->void:
 	if Global.intersection:
-		#change_material(Global.intersection.collider)
+		#change_material(Global.last_intersection.collider)
 		# Change position while dragging
-		block.global_transform.origin = lerp(block.global_transform.origin, Global.intersection.position + Global.intersection.normal * 0.5 , 20 * delta)
+		block.global_transform.origin = lerp(block.global_transform.origin, Global.intersection.position + Global.intersection.normal * 0.5 , 15 * delta)
 		# Change state
 	if Input.is_action_just_released("drag"):
 		finished.emit(self, "drop")
