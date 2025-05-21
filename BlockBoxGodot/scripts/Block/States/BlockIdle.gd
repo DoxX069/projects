@@ -1,10 +1,15 @@
 extends BlockState
 class_name BlockIdle
 
+func enter() ->void:
+	last_position = block.global_position
+	print(last_position)
+
 func physics_update(_delta: float) -> void:
 	raycast_down()
 	raycast_up()
-	ground_distance = Global.under_block_position.distance_to(block.global_transform.origin)
+	if ray_down:
+		ground_distance = ray_down.position.distance_to(block.global_transform.origin)
 	#Global.dragged_block = null
 	if not block_above:
 		dropable = true

@@ -14,6 +14,7 @@ func _physics_process(_delta):
 		query.exclude = [Global.dragged_block]
 	query.collide_with_areas = true
 	Global.intersection = space_state.intersect_ray(query)
+	# Store last intersection except for the platform area
 	if Global.intersection and Global.intersection.collider != $"../../platform/Area3D":
-		Global.last_collider_position = Global.intersection.collider.position
+		Global.last_intersection = Global.intersection
 		#print(Global.intersection.collider)
