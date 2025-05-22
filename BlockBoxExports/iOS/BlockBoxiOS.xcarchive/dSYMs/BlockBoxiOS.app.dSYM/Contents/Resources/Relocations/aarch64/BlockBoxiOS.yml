@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/doxx/Library/Developer/Xcode/DerivedData/BlockBoxiOS-alpkpzvmkumcwkgwzdclnaipevew/Build/Intermediates.noindex/ArchiveIntermediates/BlockBoxiOS/InstallationBuildProductsLocation/Applications/BlockBoxiOS.app/BlockBoxiOS'
-relocations:
-  - { offset: 0x26, size: 0x8, addend: 0x0, symName: __Z28godot_ios_plugins_initializev, symObjAddr: 0x0, symBinAddr: 0x100004000, symSize: 0x4 }
-  - { offset: 0x33, size: 0x8, addend: 0x0, symName: __Z28godot_ios_plugins_initializev, symObjAddr: 0x0, symBinAddr: 0x100004000, symSize: 0x4 }
-  - { offset: 0x4C, size: 0x8, addend: 0x0, symName: __Z30godot_ios_plugins_deinitializev, symObjAddr: 0x4, symBinAddr: 0x100004004, symSize: 0x4 }
-...
