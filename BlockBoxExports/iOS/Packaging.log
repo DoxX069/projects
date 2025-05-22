@@ -1,0 +1,155 @@
+2025-05-22 09:27:04 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x144ecd470; archive(resolved)="<IDEArchive: 0x6000015117a0>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team(resolved)="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x144ecd470; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0x144ecd1e0; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144ecf700; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144eb3100; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144eb2ef0; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144ebdb90; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144e38200; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144ec0db0; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144ec0ba0; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="<IDEProvisioningBasicTeam: 0x600003f00fa0; teamID='4LQR375N9Y', teamName='(null)'>">
+	<IDEDistributionContext: 0x144ec0990; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="(null)">
+	<IDEDistributionContext: 0x144ec0300; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="(null)">
+	<IDEDistributionContext: 0x144ec00f0; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="(null)">
+	<IDEDistributionContext: 0x144eb7260; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600003c99e10>", team="(null)">
+	<IDEDistributionContext: 0x144eb2930; archive = "<IDEArchive: 0x6000015117a0>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x144ecd470>
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2025-05-22 09:27:04 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app' '/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app'
+2025-05-22 09:27:04 +0000  >>> Copying /Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app 
+2025-05-22 09:27:04 +0000  copying file ./_CodeSignature/CodeResources ... 
+2025-05-22 09:27:04 +0000  4422 bytes for ./_CodeSignature/CodeResources
+2025-05-22 09:27:04 +0000  copying file ./en.lproj/InfoPlist.strings ... 
+2025-05-22 09:27:04 +0000  42 bytes for ./en.lproj/InfoPlist.strings
+2025-05-22 09:27:04 +0000  copying file ./BlockBoxiOS ... 
+2025-05-22 09:27:04 +0000  71185856 bytes for ./BlockBoxiOS
+copying file ./AppIcon60x60@2x.png ... 
+2025-05-22 09:27:04 +0000  8306 bytes for ./AppIcon60x60@2x.png
+copying file ./Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2104 bytes for ./Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+924 bytes for ./Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Launch Screen.storyboardc/Info.plist ... 
+2025-05-22 09:27:04 +0000  258 bytes for ./Launch Screen.storyboardc/Info.plist
+2025-05-22 09:27:04 +0000  copying file ./BlockBoxiOS.pck ... 
+2025-05-22 09:27:04 +0000  26241952 bytes for ./BlockBoxiOS.pck
+copying file ./Assets.car ... 
+2025-05-22 09:27:04 +0000  858959 bytes for ./Assets.car
+2025-05-22 09:27:04 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2025-05-22 09:27:04 +0000  12238 bytes for ./AppIcon76x76@2x~ipad.png
+2025-05-22 09:27:04 +0000  copying file ./PrivacyInfo.xcprivacy ... 
+2025-05-22 09:27:04 +0000  990 bytes for ./PrivacyInfo.xcprivacy
+2025-05-22 09:27:04 +0000  copying file ./embedded.mobileprovision ... 
+2025-05-22 09:27:04 +0000  12275 bytes for ./embedded.mobileprovision
+2025-05-22 09:27:04 +0000  copying file ./Info.plist ... 
+2025-05-22 09:27:04 +0000  1494 bytes for ./Info.plist
+2025-05-22 09:27:04 +0000  copying file ./PkgInfo ... 
+2025-05-22 09:27:04 +0000  8 bytes for ./PkgInfo
+2025-05-22 09:27:04 +0000 [MT] /usr/bin/ditto exited with 0
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2025-05-22 09:27:04 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2025-05-22 09:27:04 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2025-05-22 09:27:04 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2025-05-22 09:27:04 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2025-05-22 09:27:04 +0000 [MT] Item /Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app doesn't have the entitlement com.apple.developer.web-browser-engine.host enabled, returning ["arm64e"]
+2025-05-22 09:27:04 +0000 [MT] Archs to thin for item /Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app are ["arm64e"]
+2025-05-22 09:27:04 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app/BlockBoxiOS' '-verify_arch' 'arm64e'
+2025-05-22 09:27:04 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2025-05-22 09:27:04 +0000 [MT] Skipping architecture thinning for item "BlockBoxiOS" because arch "arm64e" wasn't found
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionODRStep
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2025-05-22 09:27:04 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2025-05-22 09:27:04 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001a08c00; bundleID='com.NilsAmmon.BlockBox', path='<DVTFilePath:0x600001ae55c0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001a09620; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b90d80; name='Apple Development: ammonnils@gmail.com (G7J5B4MX5Q)', hash='AAF0E92AAFDFEF15F4F327D1A43D8C2640D58603', serialNumber='4C30D3A4DE3D4DC9AC0B425A83A23184', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-21 18:29:52 +0000''>', entitlements='{
+    "application-identifier" = "4LQR375N9Y.com.NilsAmmon.BlockBox";
+    "com.apple.developer.team-identifier" = 4LQR375N9Y;
+    "get-task-allow" = 1;
+}', teamID='4LQR375N9Y', identifier='com.NilsAmmon.BlockBox', executablePath='<DVTFilePath:0x600001a196e0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app/BlockBoxiOS'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "4LQR375N9Y.com.NilsAmmon.BlockBox";
+    "com.apple.developer.team-identifier" = 4LQR375N9Y;
+    "get-task-allow" = 1;
+}
+2025-05-22 09:27:04 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2025-05-22 09:27:04 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600001a08c00; bundleID='com.NilsAmmon.BlockBox', path='<DVTFilePath:0x600001ae55c0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001a09620; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b90840; name='Apple Development: ammonnils@gmail.com (G7J5B4MX5Q)', hash='AAF0E92AAFDFEF15F4F327D1A43D8C2640D58603', serialNumber='4C30D3A4DE3D4DC9AC0B425A83A23184', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-21 18:29:52 +0000''>', entitlements='{
+    "application-identifier" = "4LQR375N9Y.com.NilsAmmon.BlockBox";
+    "com.apple.developer.team-identifier" = 4LQR375N9Y;
+    "get-task-allow" = 1;
+}', teamID='4LQR375N9Y', identifier='com.NilsAmmon.BlockBox', executablePath='<DVTFilePath:0x600001a196e0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app/BlockBoxiOS'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "4LQR375N9Y.com.NilsAmmon.BlockBox";
+    "com.apple.developer.team-identifier" = 4LQR375N9Y;
+    "get-task-allow" = 1;
+}
+2025-05-22 09:27:04 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600001a08c00; bundleID='com.NilsAmmon.BlockBox', path='<DVTFilePath:0x600001ae55c0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600001a09620; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600000b90840; name='Apple Development: ammonnils@gmail.com (G7J5B4MX5Q)', hash='AAF0E92AAFDFEF15F4F327D1A43D8C2640D58603', serialNumber='4C30D3A4DE3D4DC9AC0B425A83A23184', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-21 18:29:52 +0000''>', entitlements='{
+    "application-identifier" = "4LQR375N9Y.com.NilsAmmon.BlockBox";
+    "com.apple.developer.team-identifier" = 4LQR375N9Y;
+    "get-task-allow" = 1;
+}', teamID='4LQR375N9Y', identifier='com.NilsAmmon.BlockBox', executablePath='<DVTFilePath:0x600001a196e0:'/Users/doxx/Dev/projects/BlockBoxExports/iOS/BlockBoxiOS.xcarchive/Products/Applications/BlockBoxiOS.app/BlockBoxiOS'>', hardenedRuntime='0'>'> to: /var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/entitlements~~~yx1NZ5
+2025-05-22 09:27:04 +0000 [MT] invoking codesign: <NSConcreteTask: 0x600001e8af30; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    AAF0E92AAFDFEF15F4F327D1A43D8C2640D58603,
+    "--entitlements",
+    "/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/entitlements~~~yx1NZ5",
+    "--preserve-metadata=identifier,flags,runtime",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app"
+)'>
+2025-05-22 09:27:04 +0000 [MT] codesign output: /var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app: replacing existing signature
+/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app: signed app bundle with Mach-O thin (arm64) [com.NilsAmmon.BlockBox]
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2025-05-22 09:27:04 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2025-05-22 09:27:04 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2025-05-22 09:27:04 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root' '/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Packages/BlockBoxiOS.ipa'
+2025-05-22 09:27:04 +0000  >>> Copying /var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root 
+2025-05-22 09:27:04 +0000  copying file ./Payload/BlockBoxiOS.app/_CodeSignature/CodeResources ... 
+2025-05-22 09:27:04 +0000  4422 bytes for ./Payload/BlockBoxiOS.app/_CodeSignature/CodeResources
+2025-05-22 09:27:04 +0000  copying file ./Payload/BlockBoxiOS.app/en.lproj/InfoPlist.strings ... 
+2025-05-22 09:27:04 +0000  42 bytes for ./Payload/BlockBoxiOS.app/en.lproj/InfoPlist.strings
+copying file ./Payload/BlockBoxiOS.app/BlockBoxiOS ... 
+2025-05-22 09:27:05 +0000  71185856 bytes for ./Payload/BlockBoxiOS.app/BlockBoxiOS
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/AppIcon60x60@2x.png ... 
+8306 bytes for ./Payload/BlockBoxiOS.app/AppIcon60x60@2x.png
+copying file ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2104 bytes for ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2025-05-22 09:27:05 +0000  924 bytes for ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/Info.plist ... 
+2025-05-22 09:27:05 +0000  258 bytes for ./Payload/BlockBoxiOS.app/Launch Screen.storyboardc/Info.plist
+copying file ./Payload/BlockBoxiOS.app/BlockBoxiOS.pck ... 
+2025-05-22 09:27:05 +0000  26241952 bytes for ./Payload/BlockBoxiOS.app/BlockBoxiOS.pck
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/Assets.car ... 
+2025-05-22 09:27:05 +0000  858959 bytes for ./Payload/BlockBoxiOS.app/Assets.car
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/AppIcon76x76@2x~ipad.png ... 
+2025-05-22 09:27:05 +0000  12238 bytes for ./Payload/BlockBoxiOS.app/AppIcon76x76@2x~ipad.png
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/PrivacyInfo.xcprivacy ... 
+2025-05-22 09:27:05 +0000  990 bytes for ./Payload/BlockBoxiOS.app/PrivacyInfo.xcprivacy
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/embedded.mobileprovision ... 
+2025-05-22 09:27:05 +0000  12275 bytes for ./Payload/BlockBoxiOS.app/embedded.mobileprovision
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/Info.plist ... 
+2025-05-22 09:27:05 +0000  1494 bytes for ./Payload/BlockBoxiOS.app/Info.plist
+2025-05-22 09:27:05 +0000  copying file ./Payload/BlockBoxiOS.app/PkgInfo ... 
+8 bytes for ./Payload/BlockBoxiOS.app/PkgInfo
+2025-05-22 09:27:05 +0000 [MT] /usr/bin/ditto exited with 0
+2025-05-22 09:27:05 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2025-05-22 09:27:05 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2025-05-22 09:27:05 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2025-05-22 09:27:05 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600001a394a0:'/var/folders/0l/s31trhh97p93zngz0794v1xh0000gn/T/XcodeDistPipeline.~~~m3S69D/Root/Payload/BlockBoxiOS.app'>
+2025-05-22 09:27:05 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
